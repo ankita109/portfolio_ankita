@@ -1,6 +1,7 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
+  "homepage": "https://ankita109.github.io/portfolio_ankita",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -9,6 +10,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.1.1",
     "d3-ease": "^3.0.1",
+    "gh": "^2.8.9",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.2.0",
     "react-animated-text": "^0.1.4",
@@ -30,6 +32,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build", 
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
