@@ -1,38 +1,480 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@221&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+* {
+  font-family: "Glory", sans-serif;
+}
+
+.menu-active {
+  font-weight: bold;
+  border-bottom: 1px solid #565387;
+}
+
+/* Navbar */
+.navbar {
+  -webkit-box-shadow: 0 5px 9px -7px #000;
+  -moz-box-shadow: 0 5px 9px -7px #000;
+  box-shadow: 0 5px 9px -7px #000;
+}
+
+.navbar a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.navbar a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: ".";
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+.navbar a:hover:after {
+  animation: circle 1.5s ease-in forwards;
+}
+.navbar-brand {
+  font-family: "Lobster";
+}
+
+@keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+/* Home Page */
+.home {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* height: 32rem; */
+  background: radial-gradient(rgb(199, 242, 243) 2px, transparent 4px),
+    radial-gradient(rgb(199, 242, 243) 2px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #e7f5fe;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+#header {
+  width: 100%;
+  height: 37rem;
+  /* margin-top: 70px;  */
+}
+
+#header h1 .title-wave {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Lobster";
+  color: rgb(26, 23, 18);
+}
+.titleHeader {
+  text-align: end;
+  margin-left: 26%;
+}
+
+#title {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#title2 {
+  width: 47%;
+  text-align: end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.hhh {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 1%;
+}
+#header .brand-name {
+  color: #f73b3b;
+}
+
+#header .btn-get-started {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.5s;
+  color: #000000;
+  border: 2px solid #f73b3b;
+  text-decoration: none;
+}
+
+/* Skills and Academics component heading style */
+.component-heading {
+  font-family: "Lobster";
+  text-align: center;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+#header .btn-get-started:hover {
+  background: #f73b3b;
+  color: rgb(241, 241, 241);
+}
+
+@media (max-width: 600px) {
+  .home {
+    height: 30rem;
+  }
+  .titleHeader {
+    margin-left: 0;
+  }
+  #header h1 .title-wave {
+    margin: 0 0 10px 0;
+    font-size: 47px;
+    font-weight: 700;
+    font-family: "Lobster";
+    color: rgb(26, 23, 18);
+  }
+}
+/* Contact CSS */
+
+#contact {
+  width: 100%;
+  height: 100%;
+  min-height: 37rem;
+}
+@media (max-width: 600px) {
+  #contact {
+    min-height: 71rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-family: "Playfair Display", serif;
+  font: 300 60px; /*'Oswald', sans-serif;*/
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: "Lato";
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-control,
+textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all 0.2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px "Lato", sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px "Lato", sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px "Oswald", sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .direct-contact-container,
+  .form-horizontal {
+    margin: 0 auto;
   }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .direct-contact-container,
+  .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
+  .form-control,
+  textarea {
+    margin: 0 auto;
+  }
+
+  .name,
+  .email,
+  textarea {
+    width: 280px;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+  #contact-form {
+    width: 18rem;
+  }
+  .place {
+    margin-left: 12%;
+  }
+  .phone {
+    margin-left: 12%;
+  }
+  .gmail {
+    margin-left: 5%;
+  }
+}
+
+/* Skills CSS */
+/* myComponent.css */
+
+.myBubbleUI {
+  width: 100%;
+  /* max-width: 1000px; */
+  height: 600px;
+  border-radius: 50px;
+}
+
+.child {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.icon {
+  font-size: 8rem;
+}
+
+.top-elements {
+  margin-top: 3rem;
+  width: 100%;
 }
