@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import DSAGFG from "./image/GFG_DSA.png";
+import WEBLOVE from "./image/CodeHelp.png";
 import Lamicons from "./image/Lamicons.png";
 import CPPUdemy from "./image/CPP_Udemy.png";
 import CERA_serverJS from "./image/CERA_serverJS.png";
@@ -54,6 +55,11 @@ const Certificates = () => {
       src: WEBUdemy,
       width: 5,
       height: 3,
+    },
+    {
+      src: WEBLOVE,
+      width: 10,
+      height: 4,
     },
     {
       src: CPPUdemy,
